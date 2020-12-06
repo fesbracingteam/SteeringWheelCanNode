@@ -1,0 +1,6 @@
+swInputsIO.c:3:6:Sw_InitializeInputs	8	static
+swInputsIO.c:8:27:InvertDigitalInputStatus	16	static
+swInputsIO.c:14:22:SW_ReadAnalogInput	16	static
+swInputsIO.c:21:27:SW_ReadDigitalInput	24	static
+swInputsIO.c:51:15:SW_GetAnalogInputValue	8	static
+swInputsIO.c:55:20:SW_GetDigitalInputValue	16	static

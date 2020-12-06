@@ -1,0 +1,4 @@
+sw.c:9:13:writeAnalogInputValueToCanMessage	32	static
+sw.c:25:13:writeDigitalInputValueToCanMessage	32	static
+sw.c:46:6:SW_init	32	static
+sw.c:61:6:SW_handler	56	static
