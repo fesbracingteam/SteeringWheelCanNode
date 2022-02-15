@@ -1,12 +1,12 @@
 /**
   ******************************************************************************
-  * File Name          : CAN.h
-  * Description        : This file provides code for the configuration
-  *                      of the CAN instances.
+  * @file    can.h
+  * @brief   This file contains all the function prototypes for
+  *          the can.c file
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -17,10 +17,11 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __can_H
-#define __can_H
+#ifndef __CAN_H__
+#define __CAN_H__
+
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
@@ -30,13 +31,13 @@
 
 /* USER CODE END Includes */
 
-extern CAN_HandleTypeDef hcan2;
+extern CAN_HandleTypeDef hcan1;
 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
-void MX_CAN2_Init(void);
+void MX_CAN1_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 
@@ -45,14 +46,7 @@ void MX_CAN2_Init(void);
 #ifdef __cplusplus
 }
 #endif
-#endif /*__ can_H */
 
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
+#endif /* __CAN_H__ */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

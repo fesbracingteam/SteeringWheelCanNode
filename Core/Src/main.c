@@ -84,17 +84,17 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-	SW_init(&swHandle, sendCanMessage, HAL_GetTick);
+  SW_init(&swHandle, sendCanMessage, HAL_GetTick);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_CAN2_Init();
   MX_ADC1_Init();
+  MX_CAN1_Init();
   /* USER CODE BEGIN 2 */
 
 	//start CAN
-	while (HAL_CAN_Start(&hcan2) != HAL_OK) {
+	while (HAL_CAN_Start(&hcan1) != HAL_OK) {
 	}
 
   /* USER CODE END 2 */
@@ -165,7 +165,10 @@ void sendCanMessage(CAN_Msg_S *canMessage) {
 
 	memcpy(aData, canMessage->data, 8);
 
-	HAL_CAN_AddTxMessage(&hcan2, &pHeader, aData, &txMailbox); //function to add message for transmition
+	HAL_StatusTypeDef result = HAL_CAN_AddTxMessage(&hcan1, &pHeader, aData, &txMailbox); //function to add message for transmition
+	int a;
+
+	HAL_Delay(100); // give time for a message to be sent
 }
 /* USER CODE END 4 */
 
